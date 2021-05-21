@@ -36,11 +36,11 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         }
 
         updateElement("total_videos", total_videos);
-        updateElement("total_time", total_time);
+        updateElement("total_time", convertSecondsToTimeString(total_time));
         updateElement("completed_videos", completed_videos);
-        updateElement("completed_time", completed_time);
-        updateElement("pending_time", pending_time);
-        updateElement("current_time", current_time);
+        updateElement("completed_time", convertSecondsToTimeString(completed_time));
+        updateElement("pending_time", convertSecondsToTimeString(pending_time));
+        updateElement("current_time", convertSecondsToTimeString(current_time));
     });
   });
 
@@ -60,6 +60,10 @@ function convertTimeStringToSeconds(string) {
     }
 
     return seconds;
+}
+
+function convertSecondsToTimeString(seconds) {
+    return new Date(seconds * 1000).toISOString().substr(11, 8);
 }
 
 function updateElement(id, value) {
