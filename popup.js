@@ -15,7 +15,7 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         for (let i = 0; i < lessons.length; i++) {
             const lesson = lessons[i];
             
-            const time = convertStringToSeconds(lesson.time);
+            const time = convertTimeStringToSeconds(lesson.time);
             
             total_videos += 1;
             total_time += time;
@@ -44,7 +44,7 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     });
   });
 
-function convertStringToSeconds(string) {
+function convertTimeStringToSeconds(string) {
     var splitted = string.split(":");
 
     var multiplier = 1;
@@ -54,6 +54,7 @@ function convertStringToSeconds(string) {
     for (let i = splitted.length - 1; i >= 0; i--) {
         const element = splitted[i];
 
+        // element is string and +element converts it to number
         seconds += +element * multiplier;
         multiplier *= 60;
     }
