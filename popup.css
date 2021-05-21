@@ -79,3 +79,18 @@ body{
 #wrapper .row > div#current .pill{
     color: #007bec;
 }
+
+#wrapper .row > div#current #speeds-wrapper{
+    direction: ltr;
+}
+
+#wrapper .row > div#current #speeds-wrapper button{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 3px solid #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#wrapper .row > div#current #speeds-wrapper button.active{
+    background-color: rgba(255, 255, 255, 0.7);
+}

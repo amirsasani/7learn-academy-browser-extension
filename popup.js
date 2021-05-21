@@ -9,9 +9,8 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         var completed_time = 0;
         var pending_time = 0;
         var current_time = 0;
-        var speed = 1;
         
-        const lessons = response.lessons;
+        var lessons = response.lessons;
         for (let i = 0; i < lessons.length; i++) {
             const lesson = lessons[i];
             
@@ -44,6 +43,34 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     });
   });
 
+
+
+
+const speedButtons = document.querySelectorAll("#wrapper .row > div#current #speeds-wrapper button.speed");
+for (const button of speedButtons) {
+    button.addEventListener("click", function(){
+        for (const btn of speedButtons) {
+            btn.classList.remove("active");
+        }
+
+        button.classList.remove("active");
+        button.classList.add("active");
+
+
+        const numberPattern = /[-]{0,1}[\d]*[.]{0,1}[\d]+/g;
+        const speed = button.className.match( numberPattern );
+        
+        
+        var _current_time = document.getElementById("current_time").dataset.original;
+        _current_time = convertTimeStringToSeconds(_current_time);
+        _current_time /= speed;
+        _current_time = convertSecondsToTimeString(_current_time);
+        document.getElementById("current_time").innerText = _current_time;
+    });
+}
+
+
+
 function convertTimeStringToSeconds(string) {
     var splitted = string.split(":");
 
@@ -67,5 +94,7 @@ function convertSecondsToTimeString(seconds) {
 }
 
 function updateElement(id, value) {
-    document.getElementById(id).innerText = value;
+    const element = document.getElementById(id);
+    element.innerText = value;
+    element.dataset.original = value;
 }

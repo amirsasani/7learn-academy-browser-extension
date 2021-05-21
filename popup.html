@@ -14,24 +14,24 @@
             <div id="total">
                 <p>
                     این دوره
-                    <span class="pill" id="total_videos">0</span>
+                    <span data-original="0" class="pill" id="total_videos">0</span>
                     ویدیو دارد.
                 </p>
                 <p>
                     و در کل
-                    <span class="pill" id="total_time">00:00</span>
+                    <span data-original="0" class="pill" id="total_time">00:00</span>
                     دقیقه است.
                 </p>
             </div>
             <div id="completed">
                 <p>
                     شما
-                    <span class="pill" id="completed_videos">0</span>
+                    <span data-original="0" class="pill" id="completed_videos">0</span>
                     ویدیو را تماشا کرده‌اید.
                 </p>
                 <p>
                     که
-                    <span class="pill" id="completed_time">00:00</span>
+                    <span data-original="0" class="pill" id="completed_time">00:00</span>
                     دقیقه می‌شود.
                 </p>
             </div>
@@ -39,7 +39,7 @@
         <div class="row">
             <div id="pending">
                 <p>
-                    <span class="pill" id="pending_time">00:00</span>
+                    <span data-original="0" class="pill" id="pending_time">00:00</span>
                     دقیقه تا پایان دوره باقی مانده است.
                 </p>
             </div>
@@ -48,17 +48,24 @@
             <div id="current">
                 <p>
                     ویدیو جاری
-                    <span class="pill" id="current_time">00:00</span>
+                    <span data-original="0" class="pill" id="current_time">00:00</span>
                     دقیقه است.
                 </p>
                 <p>
-                    <input type="number"
-                            name="speed"
-                            id="speed"
-                            value="1"
-                            min="1"
-                            max="3"
-                            step="0.25">
+                    با سرعت
+                    <div id="speeds-wrapper">
+                        <button class="speed pill active 1x">1x</button>
+                        <button class="speed pill 1.25x">1.25x</button>
+                        <button class="speed pill 1.5x">1.5x</button>
+                        <button class="speed pill 1.75x">1.75x</button>
+
+                        <button class="speed pill 2x">2x</button>
+                        <button class="speed pill 2.25x">2.25x</button>
+                        <button class="speed pill 2.5x">2.5x</button>
+                        <button class="speed pill 2.75x">2.75x</button>
+
+                        <button class="speed pill 3x">3x</button>
+                    </div>
                 </p>
             </div>
         </div>
