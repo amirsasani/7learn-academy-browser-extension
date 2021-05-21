@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vazir-font.css">
     <link rel="stylesheet" href="popup.css">
     <title>7Learn Academy</title>
 </head>
@@ -13,29 +14,32 @@
             <div id="total">
                 <p>
                     این دوره
-                    <span id="total_videos">0</span>
+                    <span class="pill" id="total_videos">0</span>
                     ویدیو دارد.
                 </p>
                 <p>
                     و در کل
-                    <span id="total_time">00:00</span>
+                    <span class="pill" id="total_time">00:00</span>
                     دقیقه است.
                 </p>
             </div>
             <div id="completed">
                 <p>
                     شما
-                    <span id="completed_videos">0</span>
+                    <span class="pill" id="completed_videos">0</span>
                     ویدیو را تماشا کرده‌اید.
                 </p>
                 <p>
-                    تاکنون
-                    <span id="completed_time">00:00</span>
-                    دقیقه را مشاهده کزده‌اید.
+                    که
+                    <span class="pill" id="completed_time">00:00</span>
+                    دقیقه می‌شود.
                 </p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="pending">
                 <p>
-                    و
-                    <span id="pending_time">00:00</span>
+                    <span class="pill" id="pending_time">00:00</span>
                     دقیقه تا پایان دوره باقی مانده است.
                 </p>
             </div>
@@ -44,7 +48,7 @@
             <div id="current">
                 <p>
                     ویدیو جاری
-                    <span id="current_time">00:00</span>
+                    <span class="pill" id="current_time">00:00</span>
                     دقیقه است.
                 </p>
                 <p>
