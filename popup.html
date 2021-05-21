@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7Learn Academy</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="row">
+            <div id="total">
+                <p>
+                    این دوره
+                    <span id="total_videos">0</span>
+                    ویدیو دارد.
+                </p>
+                <p>
+                    و در کل
+                    <span id="total_time">00:00</span>
+                    دقیقه است.
+                </p>
+            </div>
+            <div id="completed">
+                <p>
+                    شما
+                    <span id="completed_videos">0</span>
+                    ویدیو را تماشا کرده‌اید.
+                </p>
+                <p>
+                    تاکنون
+                    <span id="completed_time">00:00</span>
+                    دقیقه را مشاهده کزده‌اید.
+                </p>
+                <p>
+                    و
+                    <span id="pending_time">00:00</span>
+                    دقیقه تا پایان دوره باقی مانده است.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="current">
+                <p>
+                    ویدیو جاری
+                    <span id="current_time">00:00</span>
+                    دقیقه است.
+                </p>
+                <p>
+                    <input type="number"
+                            name="speed"
+                            id="speed"
+                            value="1"
+                            min="1"
+                            max="3"
+                            step="0.25">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
